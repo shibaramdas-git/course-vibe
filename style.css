@@ -1,4 +1,7 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,4 +12,114 @@
   --dark-color: #070917;
   --light-color: #e8f7fb;
   --light-blue-color: #6f7dfb;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+/* Helper classes */
+.wrapper {
+  max-width: 1134px;
+  margin: 0 auto;
+}
+/* @media (max-width: 834px) {
+  .wrapper {
+    max-width: 714px;
+  }
+}
+@media (max-width: 414px) {
+  .wrapper {
+    max-width: 350px;
+  }
+} */
+
+/* Buttons */
+.btn {
+  /* 1. hwmp 2. color,font 3. pseudo 4. position  */
+  padding: 16px 32px;
+  border-radius: 24px;
+  display: inline-block; /* To respect block level properties- w,h,m,p */
+
+  color: var(--light-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+.btn.dark {
+  background: var(--dark-blue-color);
+}
+.btn.light {
+  background: var(--orange-color);
+}
+.btn.enroll-icon {
+  padding-left: 30px;
+}
+.btn.enroll-icon::before {
+  content: url("./assets/images/enrollnow-icon.svg");
+  margin-right: 3px;
+  position: relative;
+  top: 2px;
+}
+/* ---------------------------- */
+/* Header */
+/* ---------------------------- */
+
+header {
+  background-image: linear-gradient(#6f7dfb, #26308c);
+  height: 100vh;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-color);
+  width: 1134px;
+
+  position: fixed;
+  top: 40px;
+}
+nav > .logo {
+  font-size: 30px;
+  font-weight: 900;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+nav ul li a {
+  font-weight: 500;
+  color: var(--light-color);
+}
+
+/* ---------------------------- */
+/* Hero section*/
+/* ---------------------------- */
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+.hero-section div {
+  border: 1px solid #000;
+}
+.hero-section .right {
+  align-self: flex-end;
+}
+.hero-section .right img {
+  mix-blend-mode: multiply;
+}
+.hero-section .left {
+  align-self: center;
+}
+.achievement-card {
+  display: none;
 }
